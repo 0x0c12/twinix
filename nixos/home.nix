@@ -5,6 +5,10 @@
   home.homeDirectory = "/home/twilight";
   home.stateVersion = "26.05";
 
+  home.packages = [
+    pkgs.home-manager
+  ];
+
   wayland.windowManager.sway = {
     enable = true;
     config = {
