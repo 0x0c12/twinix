@@ -3,5 +3,6 @@
 {
 	home.packages = [
 	    pkgs.home-manager
-	  ];
+	    pkgs.eww
+	];
 }
