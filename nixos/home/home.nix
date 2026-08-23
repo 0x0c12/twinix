@@ -9,6 +9,7 @@
     ./programs.nix
     ./sway.nix
     ./kitty.nix
+    ./fonts.nix
   ];
 
   home.packages = [

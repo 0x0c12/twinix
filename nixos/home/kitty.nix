@@ -1,5 +1,12 @@
 { config, pkgs, ... }:
 
 {
-	programs.kitty.enable = true;
+	programs.kitty = {
+		enable = true;
+		
+		font = {
+			name = "JetBrainsMono Nerd Font";
+			size = 14;
+		};
+        };
 }
