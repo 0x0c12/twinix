@@ -4,4 +4,4 @@
 	home.packages = [
 	    pkgs.home-manager
 	  ];
-};
+}

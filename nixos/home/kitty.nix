@@ -2,4 +2,4 @@
 
 {
 	programs.kitty.enable = true;
-};
+}
