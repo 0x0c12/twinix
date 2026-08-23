@@ -44,7 +44,7 @@
           inherit pkgs;
 
           modules = [
-	    ./nixos/home.nix
+	    ./nixos/home/home.nix
 	  ];
         };
 
