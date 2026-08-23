@@ -124,6 +124,9 @@
 
   # List services that you want to enable:
 
+  # Enable Tablet Drivers
+  hardware.opentabletdriver.enable = true;
+
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
 
