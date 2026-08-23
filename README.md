@@ -75,3 +75,24 @@ home-manager switch --flake .#twilight
 ```
 
 for user-specific
+
+# File structure
+
+```
+.
+├── flake.lock
+├── flake.nix
+├── nixos
+│   ├── configuration.nix
+│   ├── hardware-configuration.nix
+│   └── home
+│       ├── fonts.nix
+│       ├── git.nix
+│       ├── home.nix
+│       ├── kitty.nix
+│       ├── programs.nix
+│       └── sway.nix
+└── README.md
+```
+
+I just added this to flex the tree command which I found cool :3
