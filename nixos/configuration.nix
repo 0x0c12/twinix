@@ -47,12 +47,23 @@
     wrapperFeatures.gtk = true; 
   };
 
+  programs.dconf.enable = true;
+
   security.pam.services.swaylock = {};
 
   # Enable the X11 windowing system.
   hardware.graphics.enable = true;
   # services.xserver.enable = true;
   services.xserver.videoDrivers = [ "amdgpu" ];
+
+  xdg.portal = {
+    enable = true;
+    wlr.enable = true;
+    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+    # config = {
+    # 	common.default = "*";
+    # };
+  };
 
   # Configure keymap in X11
   # services.xserver.xkb.layout = "us";
@@ -86,6 +97,8 @@
   # Enable touchpad support (enabled default in most desktopManager).
   services.libinput.enable = true;
 
+  services.dbus.enable = true;
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.twilight = {
     isNormalUser = true;
@@ -103,12 +116,6 @@
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     wget
     swaylock
-    swayidle
-    wl-clipboard
-    mako
-    alacritty
-    wofi
-    waybar
     opentabletdriver
   ];
 

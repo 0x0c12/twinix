@@ -6,7 +6,9 @@ just do a simple
 git clone https://github.com/0x0c12/twinix ~/twinix
 ```
 
-it doesn't HAVE to be ur home directory tbh
+~~it doesn't HAVE to be ur home directory tbh~~
+
+UPDATE: NOW, it does hahahaha(i hate myself)
 
 also I haven't included the config files for git and hardware because:
 - i genuinely cannot guess ur hardware and partition configs and ur partition UUIDs(so don't blame me for a broken system)

@@ -43,6 +43,10 @@
         home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
 
+	  extraSpecialArgs = {
+	    flakeRoot = ./.;
+	  };
+
           modules = [
 	    ./nixos/home/home.nix
 	  ];

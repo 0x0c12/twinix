@@ -7,12 +7,17 @@
 
   programs.home-manager.enable = true;
 
+  programs.bash.enable = true;
+
   imports = [
+    ./aliases.nix
     ./programs.nix
     ./sway.nix
     ./kitty.nix
     ./fonts.nix
     ./git.nix
+    ./gtk.nix
+    ./qt.nix
   ];
 }
 
