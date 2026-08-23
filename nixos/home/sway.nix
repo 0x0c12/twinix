@@ -14,6 +14,7 @@
 		"${mod}+Shift+q" = "kill";
 		"${mod}+space" = "exec wofi --show run";
 		"${mod}+l" = "exec swaylock";
+		"${mod}+b" = "exec firefox";
 	      };
 	    };
 	  };
