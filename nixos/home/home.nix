@@ -5,15 +5,14 @@
   home.homeDirectory = "/home/twilight";
   home.stateVersion = "26.05";
 
+  programs.home-manager.enable = true;
+
   imports = [
     ./programs.nix
     ./sway.nix
     ./kitty.nix
     ./fonts.nix
-  ];
-
-  home.packages = [
-    pkgs.home-manager
+    ./git.nix
   ];
 }
 

@@ -109,7 +109,6 @@
     alacritty
     wofi
     waybar
-    git
   ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes"  ];
