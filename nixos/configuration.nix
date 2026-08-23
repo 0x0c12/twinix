@@ -109,6 +109,7 @@
     alacritty
     wofi
     waybar
+    opentabletdriver
   ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes"  ];
