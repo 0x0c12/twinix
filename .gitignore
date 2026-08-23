@@ -1,2 +1,2 @@
-nixos/hardware-configuration.nix
-nixos/home/git.nix
+./nixos/hardware-configuration.nix
+./nixos/home/git.nix
