@@ -54,3 +54,24 @@ program.nix
 If you want to add something configurable, create a new nix file, import it into home.nix and then configure it yourself.
 
 I didn't really modularise the system configuration(which I tbh should), but I am WAY too lazy for that
+
+ONE VERY IMPORTANT THING BTW, since I have decoupled the configurations for
+config.nix and home-manager, you kinda have to run them separately if you modify any
+now according to me this is nice, because my home user doesn't need to update system
+packages everytime I change one line in the config file. Likewise, I don't have ot update my user data everytime I change something in config.
+
+You do something like this
+
+```sh
+sudo nixos-rebuild switch --flake .#twinix
+```
+
+for system-wide
+
+and
+
+```sh
+home-manager switch --flake .#twilight
+```
+
+for user-specific
