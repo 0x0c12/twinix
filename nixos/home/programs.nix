@@ -1,8 +1,9 @@
 { configs, pkgs, ...}:
 
 {
-	home.packages = [
-	    pkgs.home-manager
-	    pkgs.eww
+	home.packages = with pkgs; [
+	    home-manager
+	    eww
+            nemo 
 	];
 }
