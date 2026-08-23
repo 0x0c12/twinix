@@ -77,7 +77,7 @@
     enable = true;
     settings = {
       default_session = {
-        command = "${pkgs.tuigreet}/bin/tuigreet --time --cmd sway";  
+        command = "${pkgs.tuigreet}/bin/tuigreet --time --cmd sway"; t 
         user = "greeter";
       };
     };
@@ -109,6 +109,7 @@
     alacritty
     wofi
     waybar
+    git
   ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes"  ];

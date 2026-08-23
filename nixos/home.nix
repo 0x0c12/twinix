@@ -16,8 +16,8 @@
       in {
         "${mod}+Return" = "exec kitty";
         "${mod}+Shift+q" = "kill";
-        "${mod}+space" = "wofi --show run";
-        "${mod}+l" = "swaylock";
+        "${mod}+space" = "exec wofi --show run";
+        "${mod}+l" = "exec swaylock";
       };
     };
   };
