@@ -95,29 +95,6 @@
     ];
   };
 
-  home-manager.users.twilight = {
-    home.stateVersion = "26.05";
-    wayland.windowManager.sway = {
-      enable = true;
-      config = rec {
-      modifier = "Mod4";
-      terminal = "kitty";
-
-      keybindings = let
-        mod = modifier;
-      in {
-        "${mod}+Return" = "exec ${terminal}";
-	"${mod}+Shift+q" = "kill";
-	"${mod}+space" = "wofi --show run";
-	"${mod}+l" = "swaylock";
-       };
-      };
-    };
-    
-    programs.kitty.enable = true;
-  };
-
-
   programs.firefox.enable = true;
 
   # List packages installed in system profile.

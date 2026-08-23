@@ -33,7 +33,7 @@
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.twilight = import ./home.nix;
+            home-manager.users.twilight = import ./nixos/home.nix;
           }
         ];
       };

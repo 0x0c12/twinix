@@ -1,35 +1,27 @@
-{config, pkgs, ...}:
+{ config, pkgs, ... }:
 
 {
   home.username = "twilight";
   home.homeDirectory = "/home/twilight";
-
   home.stateVersion = "26.05";
-
-  home.packages = with pkgs; [
-    htop
-    neofetch
-    kitty
-  ];
 
   wayland.windowManager.sway = {
     enable = true;
-    config = rec {
-    modifier = "Mod4";
-    terminal = "kitty";
+    config = {
+      modifier = "Mod4";
+      terminal = "kitty";
 
-    keybindings = let
-      mod = modifier;
+      keybindings = let
+        mod = "Mod4";
       in {
-        "${mod}+Return" = "exec ${terminal}";
+        "${mod}+Return" = "exec kitty";
         "${mod}+Shift+q" = "kill";
         "${mod}+space" = "wofi --show run";
         "${mod}+l" = "swaylock";
-       };
       };
     };
+  };
+  
   programs.kitty.enable = true;
-  programs.git.enable = true;
-
-  programs.home-manager.enable = true;
 }
+
