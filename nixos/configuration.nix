@@ -2,17 +2,24 @@
 # your system. Help is available in the configuration.nix(5) man page, on
 # https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
 
-{ config, lib, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-    ];
+  imports = [
+    # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+  ];
+
+  nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [ "cloudflare-warp" ];
 
   # Use the grub EFI boot loader.
   boot.loader.systemd-boot.enable = false;
-  
+
   boot.loader.grub = {
     device = "nodev";
     efiSupport = true;
@@ -44,12 +51,12 @@
 
   programs.sway = {
     enable = true;
-    wrapperFeatures.gtk = true; 
+    wrapperFeatures.gtk = true;
   };
 
   programs.dconf.enable = true;
 
-  security.pam.services.swaylock = {};
+  security.pam.services.swaylock = { };
 
   # Enable the X11 windowing system.
   hardware.graphics.enable = true;
@@ -88,7 +95,7 @@
     enable = true;
     settings = {
       default_session = {
-        command = "${pkgs.tuigreet}/bin/tuigreet --time --cmd sway"; 
+        command = "${pkgs.tuigreet}/bin/tuigreet --time --cmd sway";
         user = "greeter";
       };
     };
@@ -102,7 +109,13 @@
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.twilight = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "networkmanager" "video" "audio" "input" ]; # Enable ‘sudo’ for the user.
+    extraGroups = [
+      "wheel"
+      "networkmanager"
+      "video"
+      "audio"
+      "input"
+    ]; # Enable ‘sudo’ for the user.
     packages = with pkgs; [
       tree
     ];
@@ -117,9 +130,14 @@
     wget
     swaylock
     opentabletdriver
+    cloudflare-warp
+    libnotify
   ];
 
-  nix.settings.experimental-features = [ "nix-command" "flakes"  ];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
@@ -137,9 +155,11 @@
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
 
+  services.cloudflare-warp.enable = true;
+
   # Open ports in the firewall.
   networking.firewall.allowedTCPPorts = [
-    80 
+    80
     443
   ];
   # networking.firewall.allowedUDPPorts = [ ... ];
@@ -171,4 +191,3 @@
   system.stateVersion = "26.05"; # Did you read the comment?
 
 }
-

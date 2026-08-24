@@ -8,11 +8,13 @@ in
     inherit theme;
   };
   imports = [
+    # helpers
     ./aliases.nix
     ./programs.nix
-    ./sway.nix
-    ./kitty.nix
     ./fonts.nix
+    ./media-keys.nix
+
+    # configs
     ./git.nix
     ./gtk.nix
     ./qt.nix
@@ -20,7 +22,9 @@ in
     ./wofi.nix
     ./swaylock.nix
     ./mako.nix
-    ./media-keys.nix
+    ./helix.nix
+    ./sway.nix
+    ./kitty.nix
   ];
 
   home.username = "twilight";
