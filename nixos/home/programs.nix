@@ -15,6 +15,7 @@
 	    eww
       nemo 
 	    nautilus
+	    fastfetch
 
 	    # editors
 	    helix
