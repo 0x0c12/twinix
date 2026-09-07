@@ -1,4 +1,82 @@
-# Setup instructions
+# Twinix
+
+Yet another stoobid nix config
+
+![twinix screenshot](assets/showcase.png)
+
+# Features
+- NixOS + Home Manager config managed with flakes
+- SwayFX based TWM
+- Waybar, Wofi & Mako for the usual desktop shenanigans
+- Custom GTK, Qt and terminal(kitty :3) theming
+- Helix configured as primary editor
+- ~~Vesktop themed() to match the rest of the desktop~~(do not use this I am WARNING you)
+- Custom alises and media-key bindings
+- Modular Home Manager config so individual programs can be configured independently
+
+## Keybinds
+
+Cause everybody loves a keyboard-centric workflow :v
+
+`Mod` = Super / Windows key
+
+### Windows
+
+| Key                     | Action                         |
+| ----------------------- | ------------------------------ |
+| `Mod + h/j/k/l`         | Focus left/down/up/right       |
+| `Mod + Shift + h/j/k/l` | Move window left/down/up/right |
+| `Mod + Shift + Space`   | Toggle floating                |
+| `Mod + q`               | Kill focused window            |
+| `Mod + r`               | Enter resize mode              |
+
+### Workspaces
+
+| Key                 | Action                       |
+| ------------------- | ---------------------------- |
+| `Mod + 1–9`         | Switch to workspace 1–9      |
+| `Mod + Shift + 1–9` | Move window to workspace 1–9 |
+
+### Applications
+
+| Key               | Action                 |
+| ----------------- | ---------------------- |
+| `Mod + Enter`     | Open Kitty             |
+| `Mod + Space`     | Open Wofi(in drun)     |
+| `Mod + b`         | Open Firefox           |
+| `Mod + e`         | Open Nautilus          |
+| `Mod + Shift + q` | Lock screen            |
+| `Mod + Shift + e` | Exit Sway              |
+
+### Screenshots
+
+| Key               | Action                                          |
+| ----------------- | ----------------------------------------------- |
+| `Print`           | Screenshot entire screen                        |
+| `Mod + Shift + s` | Select area and copy screenshot                 |
+| `Mod + Shift + c` | Scan QR code from selected area and copy result |
+
+### Media & Brightness
+
+| Key                     | Action              |
+| ----------------------- | ------------------- |
+| `XF86AudioMute`         | Toggle mute         |
+| `XF86AudioLowerVolume`  | Decrease volume     |
+| `XF86AudioRaiseVolume`  | Increase volume     |
+| `XF86MonBrightnessDown` | Decrease brightness |
+| `XF86MonBrightnessUp`   | Increase brightness |
+
+### Resize mode
+
+`Mod + r` enters resize mode.
+
+| Key           | Action             |
+| ------------- | ------------------ |
+| `h/l`         | Shrink/grow width  |
+| `k/j`         | Shrink/grow height |
+| `Mod + Enter` | Exit resize mode   |
+
+# Setup Instructions
 just do a simple
 
 ```sh
@@ -59,7 +137,7 @@ I didn't really modularise the system configuration(which I tbh should), but I a
 ONE VERY IMPORTANT THING BTW, since I have decoupled the configurations for
 config.nix and home-manager, you kinda have to run them separately if you modify any
 now according to me this is nice, because my home user doesn't need to update system
-packages everytime I change one line in the config file. Likewise, I don't have ot update my user data everytime I change something in config.
+packages everytime I change one line in the config file. Likewise, I don't have it update my user data everytime I change something in config.
 
 You do something like this
 
