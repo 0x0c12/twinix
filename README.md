@@ -87,28 +87,13 @@ git clone https://github.com/0x0c12/twinix ~/twinix
 
 UPDATE: NOW, it does hahahaha(i hate myself)
 
-also I haven't included the config files for git and hardware because:
+also I haven't included hardware configuration because:
 - i genuinely cannot guess ur hardware and partition configs and ur partition UUIDs(so don't blame me for a broken system)
-- the git.nix file contains sm personal info
 
 anyway, to generate hardware do this
 
 ```sh
 nixos-generate-config --show-hardware-config > ~/twinix/nixos/hardware-configuration.nix
-```
-
-and as for your git config just do this:
-
-```sh
-cat > ~/twinix/nixos/home/git.nix << "EOF"
-{ config, pkgs, ... }:
-
-{
-    programs.git = {
-        enable = true;
-    };
-}
-EOF
 ```
 
 you may have to bootstrap home-manager as well
