@@ -87,10 +87,7 @@ git clone https://github.com/0x0c12/twinix ~/twinix
 
 UPDATE: NOW, it does hahahaha(i hate myself)
 
-also I haven't included hardware configuration because:
-- i genuinely cannot guess ur hardware and partition configs and ur partition UUIDs(so don't blame me for a broken system)
-
-anyway, to generate hardware do this
+IMPORTANT: The hardware configuration shipped with these dots will MOST LIKELY NOT work on your system. So please generate a hardware-configuration yourself using the following command:
 
 ```sh
 nixos-generate-config --show-hardware-config > ~/twinix/nixos/hardware-configuration.nix
