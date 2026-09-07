@@ -1,5 +1,4 @@
 # Setup instructions
-
 just do a simple
 
 ```sh
@@ -82,18 +81,35 @@ for user-specific
 
 ```
 .
+├── assets
+│   ├── lockscreen.jpg
+│   ├── venti_dark.jpg
+│   ├── venti.jpg
+│   └── vesktop
+│       └── ventcord.them.css
 ├── flake.lock
 ├── flake.nix
 ├── nixos
 │   ├── configuration.nix
 │   ├── hardware-configuration.nix
 │   └── home
+│       ├── aliases.nix
 │       ├── fonts.nix
 │       ├── git.nix
+│       ├── gtk.nix
+│       ├── helix.nix
 │       ├── home.nix
 │       ├── kitty.nix
+│       ├── mako.nix
+│       ├── media-keys.nix
 │       ├── programs.nix
-│       └── sway.nix
+│       ├── qt.nix
+│       ├── swaylock.nix
+│       ├── sway.nix
+│       ├── theme.nix
+│       ├── vesktop.nix
+│       ├── waybar.nix
+│       └── wofi.nix
 └── README.md
 ```
 
