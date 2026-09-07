@@ -30,6 +30,7 @@
           "cpu"
           "memory"
           "temperature"
+          "backlight"
           "pulseaudio"
           "network"
           "battery"
@@ -184,6 +185,12 @@
         tray = {
           spacing = 8;
         };
+
+        backlight = {
+          format = "󰃠 {percent}%";
+          tooltip = true;
+          tooltip-format = "Brightness: {percent}%";
+        };
       };
     };
 
@@ -270,6 +277,7 @@
       #cpu,
       #memory,
       #temperature,
+      #backlight,
       #custom-media {
         background: alpha(@surface, 0.8);
 
@@ -300,6 +308,10 @@
       }
 
       #temperature.critical {
+        color: @cyan;
+      }
+
+      #backlight {
         color: @cyan;
       }
 

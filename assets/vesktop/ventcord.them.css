@@ -1,0 +1,274 @@
+
+/**
+ * @name Ventcord
+ * @description Glass Discord theme matching a SwayFX rice
+ * @author Twilight
+ *
+ * Based on midnight-discord architecture
+ */
+
+
+@import url("https://refact0r.github.io/midnight-discord/build/midnight.css");
+
+
+/* ==============================
+   VENTCORD PALETTE
+================================ */
+
+:root {
+
+    /*
+       Fonts
+    */
+
+    --font: "JetBrainsMono Nerd Font";
+    --code-font: "JetBrainsMono Nerd Font";
+
+
+    /*
+       Main colors
+    */
+
+    --colors: on;
+
+    --text-0: #080A0A;
+    --text-1: #CEE4F2;
+    --text-2: #CEE4F2;
+    --text-3: #8FA9B2;
+    --text-4: #437320;
+    --text-5: #24403D;
+
+
+    /*
+       Background layers
+    */
+
+    --bg-1: #080A0A;
+    --bg-2: #0D0D0D;
+    --bg-3: #12201E;
+
+
+    /*
+       Discord surfaces
+    */
+
+    --background-primary: #0D0D0D;
+    --background-secondary: #080A0A;
+    --background-secondary-alt: #12201E;
+    --background-tertiary: #080A0A;
+
+
+    /*
+       Accent system
+    */
+
+    --accent-1: #05F2DB;
+    --accent-2: #05F2DB;
+    --accent-3: #05F2DB;
+    --accent-4: #0AC9B8;
+    --accent-5: #088F83;
+
+
+    --mention:
+        rgba(5,242,219,.12);
+
+    --mention-hover:
+        rgba(5,242,219,.18);
+
+
+    /*
+       Status colors
+    */
+
+    --online-indicator: #05F2DB;
+    --idle-indicator: #437320;
+    --dnd-indicator: #CEE4F2;
+
+
+    /*
+       Geometry
+    */
+
+    --roundness-xl: 16px;
+    --roundness-l: 14px;
+    --roundness-m: 12px;
+    --roundness-s: 10px;
+    --roundness-xs: 8px;
+    --roundness-xxs: 6px;
+
+
+    /*
+       Spacing
+    */
+
+    --gap: 12px;
+
+
+    /*
+       Animation
+    */
+
+    --animations: on;
+
+    --list-item-transition:
+        .18s cubic-bezier(.2,.8,.2,1);
+
+    --unread-bar-transition:
+        .2s ease;
+
+
+    /*
+       Blur
+    */
+
+    --panel-blur: on;
+    --blur-amount: 18px;
+
+    --bg-floating:
+        rgba(8,10,10,.88);
+
+
+    /*
+       Window
+    */
+
+    --custom-window-controls: on;
+
+    --window-control-size: 14px;
+
+
+    /*
+       Branding
+    */
+
+    --corner-text:
+        "VENTI";
+}
+
+
+
+/* ==============================
+   GLASS SURFACES
+================================ */
+
+
+body {
+
+    background:
+        rgba(8,10,10,.55);
+
+}
+
+
+[class*="sidebar"],
+[class*="panels"],
+[class*="members"],
+[class*="chat"] {
+
+    backdrop-filter:
+        blur(18px);
+
+}
+
+
+
+/* ==============================
+   FLOATING PANEL STYLE
+================================ */
+
+
+[class*="popout"],
+[class*="menu"],
+[class*="modal"] {
+
+    border:
+
+        1px solid
+        rgba(5,242,219,.18);
+
+
+    box-shadow:
+
+        0 12px 40px
+        rgba(0,0,0,.45);
+
+}
+
+
+
+/* ==============================
+   CYAN FOCUS STATES
+================================ */
+
+
+[class*="selected"],
+[class*="active"] {
+
+    box-shadow:
+
+        inset 3px 0 0
+        #05F2DB;
+
+}
+
+
+
+/* ==============================
+   BUTTONS
+================================ */
+
+
+button:hover {
+
+    transition:
+        .18s ease;
+
+    filter:
+        brightness(1.15);
+
+}
+
+
+
+/* ==============================
+   CHAT INPUT
+================================ */
+
+
+[class*="channelTextArea"] {
+
+    background:
+
+        rgba(18,32,30,.85);
+
+
+    border:
+
+        1px solid
+        rgba(5,242,219,.15);
+
+
+    border-radius:
+
+        14px;
+
+}
+
+
+
+/* ==============================
+   SCROLLBAR
+================================ */
+
+
+::-webkit-scrollbar-thumb {
+
+    background:
+
+        rgba(5,242,219,.25);
+
+    border-radius:
+
+        20px;
+
+}

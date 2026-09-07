@@ -25,6 +25,7 @@ in
     ./helix.nix
     ./sway.nix
     ./kitty.nix
+    ./vesktop.nix
   ];
 
   home.username = "twilight";
@@ -35,4 +36,9 @@ in
 
   programs.bash.enable = true;
 
+  # I can't say fuck proprietary anymore :pensive:
+  nixpkgs.config = {
+    allowUnfree = true;
+    allowUnfreePredicate = _: true;
+  };
 }

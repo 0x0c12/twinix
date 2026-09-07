@@ -29,6 +29,10 @@
   boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.efi.efiSysMountPoint = "/boot";
 
+  # aircrack UwU
+  # boot.kernelModules = [ "8821au" ];
+  # boot.extraModulePackages = [ config.boot.kernelPackages.rtl88xxau-aircrack ];
+
   networking.hostName = "Nyxpad"; # Define your hostname.
 
   # Configure network connections interactively with nmcli or nmtui.
@@ -132,6 +136,8 @@
     opentabletdriver
     cloudflare-warp
     libnotify
+    libinput
+    psmisc
   ];
 
   nix.settings.experimental-features = [
