@@ -123,19 +123,32 @@ packages everytime I change one line in the config file. Likewise, I don't have 
 
 You do something like this
 
-```sh
+~~```sh~~
 sudo nixos-rebuild switch --flake .#twinix
-```
+~~```~~
 
-for system-wide
+~~for system-wide~~
 
-and
+~~and~~
+
+~~```sh~~
+home-manager switch --flake .#twilight
+~~```~~
+
+~~for user-specific~~
+
+UPDATE:
+
+Those two commands are kinda redundant now(but I will be keeping them here for transparency purposes)... I added simple bash aliases that should get the job done:
 
 ```sh
-home-manager switch --flake .#twilight
+edh - this opens the nixos/home/ directory in helix to configure user specific settings
+eds - this opens the system configuration file located at nixos/configuration.nix
+hmb - this adds the changes to tracking and updates home-manager
+sysb - this adds the changes of the SYSTEM config to tracking and does a system update
 ```
 
-for user-specific
+You can refer to the file located at `nixos/home/aliases.nix` if you want to see what the bash aliases are ACTUALLY doing
 
 # File structure
 
